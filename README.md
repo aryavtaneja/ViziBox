@@ -1,2 +1,8 @@
 # ViziBox
-A Raspberry Pi-based device and companion iOS app designed to help those with vision difficulties read text around them
+The ViziBox is a device designed to assist the visually impaired in reading text around them. Built with off-the-shelf components that total to less than $100, it’s meant to provide confidence and independence to those with low vision in navigating the world around them. The device is comprised of a Raspberry Pi Zero W powered by a Pisugar battery module, a Raspberry Pi Camera Module 3 (https://www.raspberrypi.com/products/camera-module-3/), and a button wired to a GPIO pin on the Pi. The app is designed to run on an iPhone with iOS 14.0 or greater.
+
+## Building
+The device code must be uploaded to the main user's folder on the Pi Zero and set to run automatically on startup with a `systemd` service or other method as required. To connect with the companion iPhone, the network configuration for the Pi Zero must be updated with the Wi-Fi SSID and password set to the SSID and password of the mobile hotspot on the iPhone, which must be set and enabled accordingly. The iOS app can be built as an Xcode project and deployed to an iPhone with an active Apple Developer account.
+
+## Usage
+The device must be powered first, and when the hotspot connection on the iPhone is verified, the phone app can be opened. Once the app is open, the user may point the device at text and press the button, and the text will be spoken out by the iPhone within a few seconds (subject to availability and quality of cell service in the location).
